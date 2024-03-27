@@ -168,7 +168,6 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'gl', '$')
 vim.keymap.set('i', 'jj', '<Esc>', { noremap = true })
-vim.keymap.set('n', 'U', '<C-r>', { noremap = true })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
