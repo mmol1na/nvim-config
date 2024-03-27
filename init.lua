@@ -143,7 +143,7 @@ vim.opt.splitbelow = true
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
-vim.opt.colorcolumn = '88'
+-- vim.opt.colorcolumn = '88'
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
