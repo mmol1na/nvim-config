@@ -588,7 +588,7 @@ require('lazy').setup({
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        'stylua', -- Used to format Lua code
+        'stylua', -- Used to format Lua codeinit
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -737,39 +737,6 @@ require('lazy').setup({
     end,
   },
 
-  {
-    'ellisonleao/gruvbox.nvim',
-    priority = 1000,
-    config = function()
-      -- Default options:
-      require('gruvbox').setup {
-        terminal_colors = true, -- add neovim terminal colors
-        undercurl = true,
-        underline = true,
-        bold = true,
-        italic = {
-          strings = true,
-          emphasis = true,
-          comments = true,
-          operators = false,
-          folds = true,
-        },
-        strikethrough = true,
-        invert_selection = false,
-        invert_signs = false,
-        invert_tabline = false,
-        invert_intend_guides = false,
-        inverse = true, -- invert background for search, diffs, statuslines and errors
-        contrast = '', -- can be "hard", "soft" or empty string
-        palette_overrides = {},
-        overrides = {},
-        dim_inactive = false,
-        transparent_mode = false,
-      }
-      vim.cmd 'colorscheme gruvbox'
-    end,
-  },
-
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
@@ -850,16 +817,14 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.indent_line',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -881,6 +846,10 @@ require('lazy').setup({
     },
   },
 })
+
+-- NOTE: THEME SETTING
+
+vim.cmd 'colorscheme oxocarbon'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
