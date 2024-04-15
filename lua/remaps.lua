@@ -1,6 +1,6 @@
 -- Keymaps
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-vim.keymap.set('n', '<leader>i', 'gg=G', { desc = 'Fix indentation in whole file' })
+vim.keymap.set('n', '<leader>i', "gg=G''", { desc = 'Fix indentation in whole file' })
 vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
