@@ -15,8 +15,15 @@ return {
     'tpope/vim-fugitive',
     config = function()
       vim.keymap.set('n', '<leader>Ga', function()
-        vim.cmd 'Git add .'
-      end, { desc = 'Add current file to be staged' })
+        local file_name = vim.fn.expand '%:p'
+        vim.cmd('Git add ' .. file_name)
+      end, { desc = 'Add file to be staged' })
+      vim.keymap.set('n', '<leader>Gc', function()
+        vim.cmd 'Git commit '
+      end, { desc = 'Commit staged changes' })
+      vim.keymap.set('n', '<leader>Gp', function()
+        vim.cmd 'Git push'
+      end, { desc = 'Push staged changes' })
     end,
   },
 }
