@@ -30,6 +30,9 @@ return {
       vim.keymap.set('n', '<leader>gP', function()
         vim.cmd 'Git pull'
       end, { desc = 'Pull from remote' })
+      vim.keymap.set('n', '<leader>gb', function()
+        vim.cmd 'Git blame'
+      end, { desc = 'Open git blame window' })
     end,
   },
 }
