@@ -20,13 +20,16 @@ return {
       end, { desc = 'Add file to be staged' })
       vim.keymap.set('n', '<leader>gA', function()
         vim.cmd 'Git add .'
-      end, { desc = 'Add file to be staged' })
+      end, { desc = 'Add all edited files to be staged' })
       vim.keymap.set('n', '<leader>gc', function()
         vim.cmd 'Git commit '
       end, { desc = 'Commit staged changes' })
       vim.keymap.set('n', '<leader>gp', function()
         vim.cmd 'Git push'
       end, { desc = 'Push staged changes' })
+      vim.keymap.set('n', '<leader>gP', function()
+        vim.cmd 'Git pull'
+      end, { desc = 'Pull from remote' })
     end,
   },
 }
