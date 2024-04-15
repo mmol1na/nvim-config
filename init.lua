@@ -13,7 +13,7 @@
  \__|\___/|_||_||_|  |_|\__, |               
                         |___/        
 
-inspired by kickstart.nvim
+inspired and based on kickstart.nvim
 
 --]]
 
