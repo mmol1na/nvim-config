@@ -11,4 +11,12 @@ return {
       },
     },
   },
+  {
+    'tpope/vim-fugitive',
+    config = function()
+      vim.keymap.set('n', '<leader>Ga', function()
+        vim.cmd 'Git add .'
+      end, { desc = 'Add current file to be staged' })
+    end,
+  },
 }

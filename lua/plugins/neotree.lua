@@ -10,5 +10,23 @@ return {
 
   config = function()
     vim.keymap.set('n', '<C-n>', ':Neotree toggle left <CR>')
+
+    require('neo-tree').setup {
+      close_if_last_window = true,
+      event_handlers = {
+        {
+          event = 'file_opened',
+          handler = function()
+            vim.cmd 'Neotree close'
+          end,
+        },
+        {
+          event = 'file_deleted',
+          handler = function(arg)
+            print('Deleted file: ', arg)
+          end,
+        },
+      },
+    }
   end,
 }

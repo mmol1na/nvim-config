@@ -6,10 +6,4 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 -- [[ Configure and install plugins ]]
-require('lazy').setup({
-  { import = 'plugins' },
-}, {
-  ui = {
-    icons = {},
-  },
-})
+require('lazy').setup { { import = 'plugins' } }
