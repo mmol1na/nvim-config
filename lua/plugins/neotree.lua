@@ -10,7 +10,7 @@ return {
 
   config = function()
     -- vim.keymap.set('n', '<C-n>', ':Neotree toggle left <CR>')
-    vim.keymap('n', '<C-n>', function()
+    vim.keymap.set('n', '<C-n>', function()
       vim.cmd 'Neotree toggle left'
     end)
 
