@@ -21,4 +21,12 @@ return {
   { 'numToStr/Comment.nvim', opts = {} },
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+
+  -- Show color in hexcodes n stuff
+  {
+    'NvChad/nvim-colorizer.lua',
+    config = function()
+      require('colorizer').setup()
+    end,
+  },
 }
