@@ -2,6 +2,9 @@ return {
   {
     'ellisonleao/gruvbox.nvim',
     priority = 1000,
+    opts = {
+      contrast = 'hard',
+    },
     config = function() end,
   },
   {
@@ -15,6 +18,7 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
+      vim.cmd 'colorscheme gruvbox-material'
       -- configs go here
     end,
   },
@@ -25,8 +29,6 @@ return {
       contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
       overrides = {}, -- add custom overrides
     },
-    config = function()
-      vim.cmd 'colorscheme evergarden'
-    end,
+    config = function() end,
   },
 }

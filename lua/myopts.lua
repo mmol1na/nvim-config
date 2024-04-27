@@ -16,7 +16,6 @@ vim.opt.mouse = 'a'
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
-
 vim.opt.clipboard = 'unnamedplus'
 
 -- Enable break indent
