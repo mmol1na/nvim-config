@@ -2,10 +2,18 @@ return {
   {
     'ellisonleao/gruvbox.nvim',
     priority = 1000,
-    opts = {
-      contrast = 'hard',
-    },
-    config = function() end,
+    config = function()
+      require('gruvbox').setup {
+        palette_overrides = {
+          dark0_hard = '#1c1c1c',
+          dark1 = '#232323',
+        },
+        -- overrides = {
+        --   CursorLine = { bg = '#212121' },
+        -- },
+        contrast = 'hard',
+      }
+    end,
   },
   {
     'nyoom-engineering/oxocarbon.nvim',
@@ -13,12 +21,11 @@ return {
     config = function() end,
   },
   {
-    'f4z3r/gruvbox-material.nvim',
-    name = 'gruvbox-material',
+    'sainnhe/gruvbox-material',
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd 'colorscheme gruvbox-material'
+      vim.g.gruvbox_material_background = 'hard'
       -- configs go here
     end,
   },
